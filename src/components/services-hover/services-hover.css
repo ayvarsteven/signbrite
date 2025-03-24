@@ -1,0 +1,237 @@
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-886 {
+        padding: var(--sectionPadding);
+        /* clips the svg wave from overflowing */
+        overflow: hidden;
+        position: relative;
+        background-color: #f7f7f7;
+        z-index: 1;
+    }
+    #services-886 .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: 34.375em;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #services-886 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #services-886 .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+    }
+    #services-886 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.25rem;
+        transition: width 0.3s;
+    }
+    #services-886 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #services-886 .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+        position: relative;
+        z-index: 1;
+    }
+    #services-886 .cs-item {
+        list-style: none;
+        width: 100%;
+        max-width: 25.8125rem;
+        margin: 0;
+        padding: 0;
+    }
+    #services-886 .cs-link {
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        height: 26.25rem;
+        padding: 1.25rem;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        border-radius: 1rem;
+        /* clips img corners around the border */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 0.75rem;
+        position: relative;
+    }
+    #services-886 .cs-h3 {
+        font-size: 1.25rem;
+        line-height: 1.2em;
+        text-align: inherit;
+        font-weight: 700;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+    }
+    #services-886 .cs-item-p {
+        font-size: 1rem;
+        line-height: 1.5em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+    }
+    #services-886 .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        object-fit: cover;
+    }
+    #services-886 .cs-background:before {
+        /* gradient overlay */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            0deg,
+            #000000 10.13%,
+            rgba(0, 0, 0, 0) 40.71%
+        );
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        transition: height 0.3s;
+    }
+    #services-886 .cs-background img {
+        height: 100%;
+        width: 100%;
+        /* Makes img tag act as a background image */
+        object-fit: cover;
+        position: relative;
+        z-index: -1;
+        transition: transform 0.6s;
+    }
+    #services-886 .cs-wave {
+        /* we're stretching the svg wider than the viewport so it's taller and has more of a presence */
+        width: 320%;
+        height: auto;
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-886 .cs-container {
+        max-width: 80rem;
+    }
+    #services-886 .cs-card-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+    #services-886 .cs-item {
+        width: 48.9%;
+    }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #services-886 {
+        /* the padding grows with the screen width so as the svg gets taller it doesn't overlap the section */
+        padding-bottom: 14vw;
+    }
+    #services-886 .cs-item {
+        width: 30vw;
+    }
+    #services-886 .cs-link:hover .cs-h3,
+    #services-886 .cs-link:focus-within .cs-h3 {
+        color: var(--primary);
+        transform: translateY(0);
+    }
+    #services-886 .cs-link:hover .cs-item-p,
+    #services-886 .cs-link:focus-within .cs-item-p {
+        height: auto;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    #services-886 .cs-link:hover .cs-background:before,
+    #services-886 .cs-link:focus-within .cs-background:before {
+        height: 180%;
+    }
+    #services-886 .cs-link:hover .cs-background img,
+    #services-886 .cs-link:focus-within .cs-background img {
+        transform: scale(1.1);
+    }
+    #services-886 .cs-h3 {
+        /* transform down the same amount as the flex gap */
+        transform: translateY(0.75rem);
+        transition:
+            transform 0.3s,
+            color 0.3s;
+    }
+    #services-886 .cs-item-p {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(3.125rem);
+        transition:
+            height 0.3s,
+            opacity 0.3s,
+            transform 0.3s;
+    }
+    #services-886 .cs-wave {
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+}
+
+                                
