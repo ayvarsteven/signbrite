@@ -20,6 +20,8 @@ h3 {
 }
 
 :root {
+  font-family: "Roboto", sans-serif;
+
   --ff-body: "", sans-serif;
   --ff-heading: "", sans-serif;
 
@@ -42,7 +44,7 @@ h3 {
 
   /* ------------------------------- CODE STITCH ------------------------------ */
 
-  --primary: #FFC513;
+  --primary: #ffc513;
   --primaryLight: #ffba43;
   --secondary: #ffba43;
   --secondaryLight: #ffba43;
